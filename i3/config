@@ -196,3 +196,6 @@ bindsym $mod+shift+x exec ~/Documents/configs/i3/lock-screen
 
 # Set Wallpaper
 exec_always --no-startup-id feh --bg-scale ~/Downloads/wallpaper.jpg
+
+# power off
+bindsym $mod+BackSpace exec --no-startup-id "shutdown -h now"

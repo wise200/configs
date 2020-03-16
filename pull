@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git pull
+cp ./i3/config ~/.config/i3/config
+cp ./.vimrc ~/.vimrc
+

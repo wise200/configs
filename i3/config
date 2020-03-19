@@ -142,10 +142,14 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # bind google chrome to its workspace
 assign [class="Google-chrome"] $ws2
+for_window [class="Google-chrome"] focus
 
 # bind pdf viewer etc. to their workspace
 assign [class="Evince"] $ws3
 assign [class="Nautilus"] $ws3
+for_window [class="Evince"] focus
+for_window [class="Nautilus"] focus
+
 
 # scroll through workspaces
 bindsym $mod+Tab workspace next
@@ -207,4 +211,8 @@ bindsym $mod+BackSpace exec --no-startup-id "shutdown -h now"
 # enable brightness keys
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 
+
+# shortcuts to start certain programs
+bindsym $mod+g exec /usr/bin/google-chrome
+bindsym $mod+p exec /usr/bin/evince
 

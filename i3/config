@@ -223,3 +223,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+g exec /usr/bin/google-chrome
 bindsym $mod+p exec /usr/bin/evince
 
+# enable screenshots
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Control+Print exec gnome-screenshot -i

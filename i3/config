@@ -226,3 +226,6 @@ bindsym $mod+p exec /usr/bin/evince
 # enable screenshots
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 bindsym Control+Print exec gnome-screenshot -i
+
+# shortcut to suspend
+bindsym Pause exec systemctl suspend

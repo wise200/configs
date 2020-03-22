@@ -103,6 +103,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# support for multiple monitors
+set $monitors ~/.config/i3/monitors.sh
+exec_always --no-startup-id [ -f $monitors ] && $monitors
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminals"
@@ -150,6 +154,9 @@ assign [class="Nautilus"] $ws3
 for_window [class="Evince"] focus
 for_window [class="Nautilus"] focus
 
+# bind workspaces to default monitors
+workspace $ws1 output DP-0
+workspace $ws2 output HDMI-0
 
 # scroll through workspaces
 bindsym $mod+Tab workspace next

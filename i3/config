@@ -103,9 +103,16 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+z focus child
 
-# support for multiple monitors
+# define script paths
+set $lock ~/.config/i3/lock-screen
 set $monitors ~/.config/i3/monitors.sh
+
+# support for multiple monitors
 exec_always --no-startup-id [ -f $monitors ] && $monitors
+
+# Lock Screen
+bindsym $mod+shift+x exec $lock
+
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -206,9 +213,6 @@ bar {
 # Enable blue light filtering
 exec --no-startup-id redshift-gtk
 
-# Lock Screen
-bindsym $mod+shift+x exec ~/Documents/configs/i3/lock-screen
-
 # Set Wallpaper
 exec_always --no-startup-id feh --bg-scale ~/Downloads/wallpaper.jpg
 
@@ -228,4 +232,4 @@ bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures
 bindsym Control+Print exec gnome-screenshot -i
 
 # shortcut to suspend
-bindsym Pause exec i3lock && systemctl suspend
+bindsym Pause exec $lock && systemctl suspend

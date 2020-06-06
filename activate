@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# this file copies changes from git into the relevant config files
+
+cp -r ./i3/. ~/.config/i3
+cp -r ./home/. ~
+cp -r ./colors/. ~/.vim/colors
+

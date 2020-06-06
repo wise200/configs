@@ -101,7 +101,7 @@ bindsym $mod+d focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 # support for multiple monitors
 set $monitors ~/.config/i3/monitors.sh

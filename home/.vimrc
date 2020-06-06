@@ -63,6 +63,8 @@ set so=99
 
 "c++ bracket completion
 inoremap {<CR> {<CR>}<Esc>O
+inoremap (<CR> (<CR>)<Esc>O
+inoremap [<CR> [<CR>]<Esc>O
 
 "uncomment all assertions
 nnoremap <leader>a :%s/\/\/assert/assert/g<CR> 

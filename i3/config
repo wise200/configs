@@ -161,6 +161,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Google-chrome"] $ws2
 for_window [class="Google-chrome"] focus
 
+# bind terminals to their workspace
+assign [class="Gnome-terminal"] $ws1
+for_window [class="Gnome-terminal"] focus
+
 # bind pdf viewer etc. to their workspace
 assign [class="Evince"] $ws3
 assign [class="Nautilus"] $ws3

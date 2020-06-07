@@ -105,7 +105,7 @@ bindsym $mod+z focus child
 
 # define script paths
 set $lock ~/.config/i3/lock-screen
-set $monitors ~/.config/i3/monitors.sh
+set $monitors ~/.config/i3/monitors
 
 # support for multiple monitors
 exec_always --no-startup-id [ -f $monitors ] && $monitors
@@ -233,3 +233,9 @@ bindsym Control+Print exec gnome-screenshot -i
 
 # shortcut to suspend
 bindsym Pause exec $lock && systemctl suspend
+
+# refresh monitor status (detect screens)
+bindsym $mod+n exec $monitors
+
+# duplicate on additional monitors
+bindsym $mod+m exec $monitors duplicate

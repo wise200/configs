@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Grab screen info from xrandr
+CONNECTED="$(xrandr | grep "connected" | grep -v "disconnected" | cut -d ' ' -f 1 | tac)"
+DISCONNECTED="$(xrandr | grep "disconnected" | cut -d ' ' -f 1)"
+PRIMARY="$(echo "$CONNECTED" | head -n 1)"
+OTHERS="$(echo "$CONNECTED" | tail -n +2)"
+
+# Create config command
+COMMAND="xrandr --output $PRIMARY --primary --mode 1920x1080 --pos 0x0 --rotate normal"
+POS=1920
+
+# Add active displays
+if [ "$OTHERS" != "" ] ; then
+  while IFS= read -r line; do
+    if [ "$1" != "duplicate" ] ; then
+      COMMAND="$COMMAND --output $line --mode 1920x1080 --pos ${POS}x0 --rotate normal"
+      POS=$(($POS + 1920))
+    else
+      COMMAND="$COMMAND --output $line --mode 1920x1080 --same-as $PRIMARY"
+    fi
+  done <<< "$OTHERS"
+fi
+
+# Add unconnected displays
+while IFS= read -r line; do
+  COMMAND="$COMMAND --output $line --off"
+done <<< "$DISCONNECTED"
+
+echo "$COMMAND"
+eval "$COMMAND"
+

@@ -167,10 +167,6 @@ assign [class="Nautilus"] $ws3
 for_window [class="Evince"] focus
 for_window [class="Nautilus"] focus
 
-# bind workspaces to default monitors
-workspace $ws1 output DP-0
-workspace $ws2 output HDMI-0
-
 # scroll through workspaces
 bindsym $mod+Tab workspace next
 

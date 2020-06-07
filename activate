@@ -5,4 +5,5 @@
 cp -r ./i3/. ~/.config/i3
 cp -r ./home/. ~
 cp -r ./colors/. ~/.vim/colors
+cp -r ./etc/. /etc
 

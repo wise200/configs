@@ -237,8 +237,9 @@ bindsym $mod+p exec /usr/bin/evince
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 bindsym Control+Print exec gnome-screenshot -i
 
-# shortcut to suspend
+# shortcuts to suspend/shutdown
 bindsym Pause exec $lock && systemctl suspend
+bindsym $mod+Pause exec systemctl poweroff
 
 # refresh monitor status (detect screens)
 bindsym $mod+n exec $monitors

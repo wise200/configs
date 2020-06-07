@@ -128,3 +128,22 @@ inoremap `444 \threedm{}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<
 "inoremap <c-v> Ó
 "inoremap <c-b> Ú
 
+" virtual tabstops using spaces
+" from: https://vim.fandom.com/wiki/Toggle_between_tabs_and_spaces
+let my_tab=2
+execute "set shiftwidth=".my_tab
+execute "set softtabstop=".my_tab
+set expandtab
+" allow toggling between local and default mode
+function! TabToggle()
+  if &expandtab
+    set shiftwidth=4
+    set softtabstop=0
+    set noexpandtab
+  else
+    execute "set shiftwidth=".g:my_tab
+    execute "set softtabstop=".g:my_tab
+    set expandtab
+  endif
+endfunction
+nmap <F9> mz:execute TabToggle()<CR>'z

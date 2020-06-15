@@ -11,6 +11,7 @@ call plug#begin()
 Plug 'vim-latex/vim-latex'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 

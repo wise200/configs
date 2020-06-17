@@ -1,0 +1,5 @@
+[user]
+	name = wise200
+	email = jrwise200@gmail.com
+[credential]
+	helper = cache --timeout=86400

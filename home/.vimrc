@@ -13,6 +13,8 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
 Plug 'jparise/vim-graphql'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -97,26 +99,6 @@ nmap <leader>s :w<CR><leader>ll<CR>
 
 inoremap `m \mbox{}<Esc>i
 
-"matrices and vectors
-inoremap `22 \twodv{}{<++>}<++><Esc>hhhhhhhhhhi
-inoremap `222 \twodm{}{<++>}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhhhhhhhi
-inoremap `2s \sqrt{2}<++><Esc>hhhhi
-
-inoremap `33 \threedv{}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhi
-inoremap `333 \threedm{}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhi
-
-
-inoremap `<Space>22 \twodvs{}{<++>}<++><Esc>hhhhhhhhhhi
-inoremap `<Space>222 \twodms{}{<++>}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhhhhhhhi
-
-inoremap `<Space>33 \threedvs{}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhi
-inoremap `<Space>333 \threedms{}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhi
-
-
-"not swaggy yet
-inoremap `44 \threedv{}{<++>}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhhhhhhhi
-inoremap `444 \threedm{}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}{<++>}<++><Esc>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhi
-
 "Spanish accents
 "inoremap <c-a> á
 "inoremap <c-e> é
@@ -149,3 +131,7 @@ function! TabToggle()
   endif
 endfunction
 nmap <F9> mz:execute TabToggle()<CR>'z
+
+" tab navigation
+nnoremap H gT
+nnoremap L gt

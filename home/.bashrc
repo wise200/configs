@@ -123,3 +123,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # set bash to vim mode
 set -o vi
+
+# open terminal to current directory
+alias tt='gnome-terminal &'

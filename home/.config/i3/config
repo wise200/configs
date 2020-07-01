@@ -217,7 +217,7 @@ bar {
 }
 
 # Enable blue light filtering
-exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift-gtk -t 6500K:3500K -b 1.0:0.6
 
 # Set Wallpaper
 exec_always --no-startup-id feh --bg-scale ~/Downloads/wallpaper.jpg

@@ -135,3 +135,6 @@ nmap <F9> mz:execute TabToggle()<CR>'z
 " tab navigation
 nnoremap H gT
 nnoremap L gt
+
+" fuzzy search
+nnoremap <leader>f :Files<CR>

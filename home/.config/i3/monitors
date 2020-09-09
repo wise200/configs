@@ -8,14 +8,19 @@ OTHERS="$(echo "$CONNECTED" | tail -n +2)"
 
 # Create config command
 COMMAND="xrandr --output $PRIMARY --primary --mode 1920x1080 --pos 0x0 --rotate normal"
-POS=1920
+POS=0
 
 # Add active displays
 if [ "$OTHERS" != "" ] ; then
   while IFS= read -r line; do
     if [ "$1" != "duplicate" ] ; then
-      COMMAND="$COMMAND --output $line --mode 1920x1080 --pos ${POS}x0 --rotate normal"
-      POS=$(($POS + 1920))
+      if [ "$1" != "vertical" ] ; then
+        POS=$(($POS + 1920))
+        COMMAND="$COMMAND --output $line --mode 1920x1080 --pos ${POS}x0 --rotate normal"
+      else
+        POS=$(($POS + 1080))
+        COMMAND="$COMMAND --output $line --mode 1920x1080 --pos 0x${POS} --rotate normal"
+      fi
     else
       COMMAND="$COMMAND --output $line --mode 1920x1080 --same-as $PRIMARY"
     fi

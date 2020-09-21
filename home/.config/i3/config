@@ -222,9 +222,6 @@ exec --no-startup-id redshift-gtk -t 6500K:3500K -b 1.0:0.6
 # Set Wallpaper
 exec_always --no-startup-id feh --bg-scale ~/Downloads/wallpaper.jpg
 
-# power off
-bindsym $mod+BackSpace exec --no-startup-id "shutdown -h now"
-
 # enable brightness keys
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 
@@ -241,6 +238,10 @@ bindsym Control+Print exec gnome-screenshot -i
 bindsym Pause exec $lock && systemctl suspend
 bindsym $mod+Pause exec systemctl poweroff
 
+# shortcuts to suspend/shutdown, but for smaller keyboard
+bindsym $mod+BackSpace exec $lock && systemctl suspend
+bindsym $mod+Control+BackSpace exec systemctl poweroff
+
 # refresh monitor status (detect screens)
 bindsym $mod+n exec $monitors
 
@@ -249,3 +250,6 @@ bindsym $mod+m exec $monitors duplicate
 
 # vertical monitor alignment
 bindsym $mod+b exec $monitors vertical
+
+# low batter popup
+exec ~/.config/i3/i3-battery-popup -t 1m

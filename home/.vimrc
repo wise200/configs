@@ -131,6 +131,7 @@ function! TabToggle()
   endif
 endfunction
 nmap <F9> mz:execute TabToggle()<CR>'z
+nmap <F10> :let my_tab=
 
 " tab navigation
 nnoremap H gT

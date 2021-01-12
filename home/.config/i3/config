@@ -253,3 +253,6 @@ bindsym $mod+b exec $monitors vertical
 
 # low batter popup
 exec ~/.config/i3/i3-battery-popup -t 1m
+
+# slack
+bindsym $mod+t exec "killall slack"

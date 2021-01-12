@@ -125,4 +125,4 @@ export NVM_DIR="$HOME/.nvm"
 set -o vi
 
 # open terminal to current directory
-alias tt='gnome-terminal &'
+alias tt='(gnome-terminal &)'

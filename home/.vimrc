@@ -136,6 +136,8 @@ nmap <F10> :let my_tab=
 " tab navigation
 nnoremap H gT
 nnoremap L gt
+nnoremap <C-h> :tabm -1<CR>
+nnoremap <C-l> :tabm +1<CR>
 
 " fuzzy search
 nnoremap <leader>f :Files<CR>

@@ -126,3 +126,6 @@ set -o vi
 
 # open terminal to current directory
 alias tt='(gnome-terminal &)'
+
+# use git grep with colors
+alias ggrep='git -c color.grep.filename="magenta" -c color.grep.match="red"  -c color.grep.linenumber="green" grep'

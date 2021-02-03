@@ -256,3 +256,7 @@ exec ~/.config/i3/i3-battery-popup -t 1m
 
 # slack
 bindsym $mod+t exec "killall slack"
+
+# set screen timeout to 20 minutes
+exec xset s 1200
+exec xset dpms 0 0 1200

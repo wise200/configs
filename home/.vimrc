@@ -114,7 +114,7 @@ inoremap `m \mbox{}<Esc>i
 
 " virtual tabstops using spaces
 " from: https://vim.fandom.com/wiki/Toggle_between_tabs_and_spaces
-let my_tab=2
+let my_tab=4
 execute "set shiftwidth=".my_tab
 execute "set softtabstop=".my_tab
 set expandtab

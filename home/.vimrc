@@ -6,6 +6,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " manage plugins
+" You can use:
+" :PlugInstall to install all plugins
+" :PlugUpdate to updat plugins
 call plug#begin()
 
 Plug 'vim-latex/vim-latex'
@@ -15,6 +18,7 @@ Plug 'alvan/vim-closetag'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()
 

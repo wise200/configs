@@ -47,7 +47,6 @@ let g:Tex_FoldedMisc=''
 
 " Display relative line numbers
 set number
-set relativenumber
 
 " Highlight search results
 set hlsearch

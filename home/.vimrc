@@ -144,3 +144,6 @@ nnoremap <C-l> :tabm +1<CR>
 
 " fuzzy search
 nnoremap <leader>f :Files<CR>
+
+" ctags: open definition in new tab
+nnoremap <leader>d <C-w><C-]><C-w>T

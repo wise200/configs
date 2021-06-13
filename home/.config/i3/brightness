@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# pass "up" or "down" as the first argument to increase or decrease brightness, respectively
+
+
+# check for a package that can control brightness
+BRIGHTNESSCTL=$(dpkg -l brightnessctl 2> /dev/null | wc -l)
+XBACKLIGHT=$(dpkg -l xbacklight 2> /dev/null | wc -l)
+
+# use brightnessctl, if possible
+if [ "$BRIGHTNESSCTL" -ne "0" ] ; then
+    if [ "$1" == "up" ] ; then
+        brightnessctl set 1%+
+    elif [ "$1" == "down" ] ; then
+        brightnessctl set 1%-
+    else
+        echo "No valid argument"
+    fi
+    exit
+fi
+
+
+# use xbacklight, if possible
+if [ "$XBACKLIGHT" -ne "0" ] ; then
+    if [ "$1" == "up" ] ; then
+        xbacklight -inc 10
+    elif [ "$1" == "down" ] ; then
+        xbacklight -dec 10
+    else
+        echo "No valid argument"
+    fi
+fi
+

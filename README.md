@@ -9,4 +9,8 @@ On a fresh Ubuntu system, you should
 * Install i3 with the instuctions [here](https://kifarunix.com/install-and-setup-i3-windows-manager-on-ubuntu-20-04/).
 * Download a wallpaper and put it at `~/Downloads/wallpaper.jpg`. (TODO: change this)
 * To let the i3status bar read volume from the correct device, follow the instuctions [here](https://i3wm.org/docs/i3status.html#_volume).
-* For laptops, you may need to install a package so i3 can change the screen brightness. Depending on your device, `xbacklight` or `brightnessctl` might work. Install one of these packages, and the i3config will find it and use it.
+
+#### Laptops
+If your device is a laptop, you should also do the following:
+* You will need to install a package so i3 can change the screen brightness. Depending on your device, `xbacklight` or `brightnessctl` might work. Install one of these packages, and the i3config will find it and use it.
+* To get "natural" scrolling on your touchpad, follow the instructions [here](https://askubuntu.com/questions/1122513/how-to-add-natural-inverted-mouse-scrolling-in-i3-window-manager).

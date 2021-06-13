@@ -1,28 +1,41 @@
 #!/bin/bash
 
+# This script uses xrandr to connect to all available monitors
+# with the best available resolutions. It assumes that xrandr
+# list the highest resolutions first. You can use the arguments:
+#
+# "duplicate": duplicate all displays
+# "vertical": extent all displays, stacking vertically
+# "horizontal": extend all displays, stacking horizontally
+
 # Grab screen info from xrandr
 CONNECTED="$(xrandr | grep "connected" | grep -v "disconnected" | cut -d ' ' -f 1 | tac)"
 DISCONNECTED="$(xrandr | grep "disconnected" | cut -d ' ' -f 1)"
 PRIMARY="$(echo "$CONNECTED" | head -n 1)"
 OTHERS="$(echo "$CONNECTED" | tail -n +2)"
 
+# Get best possible screen resolution
+MODE=$(xrandr | grep -A1 $PRIMARY | tail -n 1 | cut -d ' ' -f 4)
+
 # Create config command
-COMMAND="xrandr --output $PRIMARY --primary --mode 1920x1080 --pos 0x0 --rotate normal"
+COMMAND="xrandr --output $PRIMARY --primary --mode $MODE --pos 0x0 --rotate normal"
 POS=0
 
 # Add active displays
 if [ "$OTHERS" != "" ] ; then
   while IFS= read -r line; do
     if [ "$1" != "duplicate" ] ; then
+      OLDMODE=$MODE
+      MODE=$(xrandr | grep -A1 $line | tail -n 1 | cut -d ' ' -f 4)
       if [ "$1" != "vertical" ] ; then
-        POS=$(($POS + 1920))
-        COMMAND="$COMMAND --output $line --mode 1920x1080 --pos ${POS}x0 --rotate normal"
+        POS=$(($POS + $(echo $OLDMODE | cut -d 'x' -f 1)))
+        COMMAND="$COMMAND --output $line --mode $MODE --pos ${POS}x0 --rotate normal"
       else
-        POS=$(($POS + 1080))
-        COMMAND="$COMMAND --output $line --mode 1920x1080 --pos 0x${POS} --rotate normal"
+        POS=$(($POS + $(echo $OLDMODE | cut -d 'x' -f 2)))
+        COMMAND="$COMMAND --output $line --mode $MODE --pos 0x${POS} --rotate normal"
       fi
     else
-      COMMAND="$COMMAND --output $line --mode 1920x1080 --same-as $PRIMARY"
+      COMMAND="$COMMAND --output $line --mode $MODE --same-as $PRIMARY"
     fi
   done <<< "$OTHERS"
 fi

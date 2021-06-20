@@ -260,3 +260,9 @@ bindsym $mod+t exec "killall slack"
 # set screen timeout to 20 minutes
 exec xset s 1200
 exec xset dpms 0 0 1200
+
+# launch gnome settings program
+bindsym $mod+c exec --no-startup-id "env XDG_CURRENT_DESKTOP=gnome gnome-control-center"
+
+#float QEMU windows
+for_window [class="Qemu-system-x86_64"] floating enable

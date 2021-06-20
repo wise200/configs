@@ -112,6 +112,7 @@ bindsym $mod+z focus child
 # define script paths
 set $lock ~/.config/i3/lock-screen
 set $monitors ~/.config/i3/monitors
+set $brightness ~/.config/i3/brightness
 
 # support for multiple monitors
 exec_always --no-startup-id [ -f $monitors ] && $monitors
@@ -223,8 +224,8 @@ exec --no-startup-id redshift-gtk -t 6500K:3500K
 exec_always --no-startup-id feh --bg-scale ~/Downloads/wallpaper.jpg
 
 # enable brightness keys
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 
+bindsym XF86MonBrightnessUp exec $brightness up
+bindsym XF86MonBrightnessDown exec $brightness down
 
 # shortcuts to start certain programs
 bindsym $mod+g exec /usr/bin/google-chrome

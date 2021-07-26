@@ -1,0 +1,14 @@
+#!/bin/sh
+ 
+# This is a template for opening terminals in the layout I like for developing a webserver
+# This template can be copied and modified to run specific programs or open terminals to specific directories
+
+i3-msg "workspace 1: Terminals; append_layout ~/.config/i3/layouts/webserver.json"
+
+# Edit these lines to change directories and run programs
+gnome-terminal &
+gnome-terminal &
+gnome-terminal &
+gnome-terminal &
+gnome-terminal &
+

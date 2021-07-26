@@ -1,0 +1,10 @@
+# Some files in this folder should not be checked into git
+# because they contain references to private repos.
+
+# By default, ignore all
+*
+
+# Add exceptions here
+!.gitignore
+!webserver
+!webserver.json

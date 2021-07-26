@@ -1,0 +1,136 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": 0.6,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 459,
+               "width": 734,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "justin@justin-XPS-13-9310: ~/configs/home/.config/i3",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 459,
+               "width": 734,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "justin@justin-XPS-13-9310: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.4,
+    "type": "con",
+    "nodes": [
+        {
+            // tabbed split container with 2 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [],
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 459,
+                       "width": 734,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "justin@justin-XPS-13-9310: ~",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^Gnome\\-terminal$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 459,
+                       "width": 734,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "justin@justin-XPS-13-9310: ~",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^Gnome\\-terminal$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 459,
+               "width": 734,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "justin@justin-XPS-13-9310: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

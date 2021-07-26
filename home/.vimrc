@@ -19,6 +19,7 @@ Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'tweekmonster/django-plus.vim'
 
 call plug#end()
 

@@ -150,3 +150,5 @@ let $FZF_DEFAULT_COMMAND = 'find . -type f'
 " ctags: open definition in new tab
 nnoremap <leader>d <C-w><C-]><C-w>T
 
+" allow more tabs open at once
+set tabpagemax=32

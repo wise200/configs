@@ -1,0 +1,13 @@
+# This is my global .gitignore file.
+
+# vim swap files
+*.swp
+*.swo
+*.swn
+
+# vim ctags
+tags
+
+# venv
+djangoenv/
+init

@@ -9,6 +9,7 @@ On a fresh Ubuntu system, you should
 * Install i3 with the instuctions [here](https://kifarunix.com/install-and-setup-i3-windows-manager-on-ubuntu-20-04/).
 * Download a wallpaper and put it at `~/Downloads/wallpaper.jpg`. (TODO: change this)
 * To let the i3status bar read volume from the correct device, follow the instuctions [here](https://i3wm.org/docs/i3status.html#_volume).
+* To enable the global gitignore, run `git config --global core.excludesfile ~/.gitignore`. (Info [here](https://stackoverflow.com/questions/4824188/git-ignore-vim-temporary-files)).
 
 #### Laptops
 If your device is a laptop, you should also do the following:

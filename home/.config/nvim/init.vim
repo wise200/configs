@@ -64,3 +64,6 @@ nmap <F10> :let my_tab=
 " fuzzy search
 nnoremap <leader>f :Files<CR>
 let $FZF_DEFAULT_COMMAND = 'find . -type f'
+
+" copy to clipboard
+vnoremap <leader>c "+y

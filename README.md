@@ -5,7 +5,7 @@ Justin Wise's Ubuntu Configuration Files
 On a fresh Ubuntu system, you should
 * Connect all devices, wifi, etc. This will be easier in the default wm.
 * The vim and i3 configs use some programs that are not installed by default. Use `sudo apt install curl feh scrot imagemagick fzf exuberant-ctags pulseaudio-utils` to install them.
-* Install vim with `sudo apt install vim`.
+* If you want it, install vim with `sudo apt install vim`.
 * Install neovim with
 ```
 sudo apt-add-repository ppa:neovim-ppa/stable

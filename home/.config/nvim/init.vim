@@ -22,6 +22,7 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " auto update parsers
 
 call plug#end()
 
@@ -71,3 +72,17 @@ let $FZF_DEFAULT_COMMAND = 'find . -type f'
 
 " copy to clipboard
 vnoremap <leader>c "+y
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = "maintained",
+
+  -- Install languages synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  highlight = {
+    enable = true,
+  },
+}
+EOF

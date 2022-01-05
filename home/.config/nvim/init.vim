@@ -21,9 +21,13 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
+" language servers
+lua require('lspconfig').pyright.setup{}
+lua require('lspconfig').clangd.setup{}
 
 " color scheme
 set termguicolors

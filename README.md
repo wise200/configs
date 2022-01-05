@@ -11,6 +11,10 @@ On a fresh Ubuntu system, you should
 sudo apt-add-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install nvim
+
+#language servers for nvim
+npm install -g pyright
+sudo apt install clangd-12
 ```
 * Install i3 with the instuctions [here](https://kifarunix.com/install-and-setup-i3-windows-manager-on-ubuntu-20-04/).
 * Download a wallpaper and put it at `~/Downloads/wallpaper.jpg`. (TODO: change this)

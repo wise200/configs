@@ -1,8 +1,9 @@
 set number " display line numbers
 set autoindent " copy indent from line to line
 set mouse=a " gui mouse
-set so=99 " keep cursor vertically centered
+set scrolloff=99 " keep cursor vertically centered
 set tabpagemax=32 " allow more tabs open at once
+set nowrap
 
 
 " install vim-plug if not installed
@@ -73,6 +74,7 @@ let $FZF_DEFAULT_COMMAND = 'find . -type f'
 " copy to clipboard
 vnoremap <leader>c "+y
 
+" treesitter config
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages

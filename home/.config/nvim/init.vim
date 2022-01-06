@@ -33,7 +33,7 @@ lua require('lspconfig').clangd.setup{}
 
 " color scheme
 set termguicolors
-colorscheme lucid
+colorscheme onedark
 
 "Reload .vimrc
 nnoremap <leader>v :source ~/.config/nvim/init.vim<CR>

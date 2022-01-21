@@ -1,3 +1,7 @@
+" NB: I use neovim now, but keep this file around in case i ever need to use vim
+
+
+
 " if necessary, install vim-plug to manage plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs

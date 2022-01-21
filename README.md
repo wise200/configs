@@ -5,7 +5,17 @@ Justin Wise's Ubuntu Configuration Files
 On a fresh Ubuntu system, you should
 * Connect all devices, wifi, etc. This will be easier in the default wm.
 * The vim and i3 configs use some programs that are not installed by default. Use `sudo apt install curl feh scrot imagemagick fzf exuberant-ctags pulseaudio-utils` to install them.
-* Install vim with `sudo apt install vim`.
+* If you want it, install vim with `sudo apt install vim`.
+* Install neovim with
+```
+sudo apt-add-repository ppa:neovim-ppa/stable
+sudo apt update
+sudo apt install nvim
+
+#language servers for nvim
+npm install -g pyright
+sudo apt install clangd-12
+```
 * Install i3 with the instuctions [here](https://kifarunix.com/install-and-setup-i3-windows-manager-on-ubuntu-20-04/).
 * Download a wallpaper and put it at `~/Downloads/wallpaper.jpg`. (TODO: change this)
 * To let the i3status bar read volume from the correct device, follow the instuctions [here](https://i3wm.org/docs/i3status.html#_volume).

@@ -29,5 +29,26 @@ if [ "$XBACKLIGHT" -ne "0" ] ; then
     else
         echo "No valid argument"
     fi
+    exit
 fi
 
+#fallback to xrandr (e.g. for OLED screens)
+SCREEN=$(xrandr | grep connected | grep -v disconnected | cut -d " " -f1)
+OLD=$(xrandr --verbose --current | grep $SCREEN -A5 | tail -n1 | grep -Eo "[0-9,.]+$")
+
+if [ "$1" == "up" ] ; then
+    OP="+"
+elif [ "$1" == "down" ] ; then
+    OP="-"
+else
+    echo "No valid argument"
+    exit
+fi
+
+NEW=$(echo "$OLD $OP 0.05" | bc)
+OVERFLOW=$(echo "($NEW < 0) || ($NEW > 1)" | bc)
+
+[[ "$OVERFLOW" -eq 0 ]] && xrandr --output $SCREEN --brightness $NEW
+
+echo $OLD
+echo $NEW

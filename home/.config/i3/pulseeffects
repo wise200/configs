@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# run pulseeffects in the background
+pulseeffects --gapplication-service &

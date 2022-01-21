@@ -113,6 +113,7 @@ bindsym $mod+z focus child
 set $lock ~/.config/i3/lock-screen
 set $monitors ~/.config/i3/monitors
 set $brightness ~/.config/i3/brightness
+set $pulseeffects ~/.config/i3/pulseeffects
 
 # support for multiple monitors
 exec_always --no-startup-id [ -f $monitors ] && $monitors
@@ -267,3 +268,6 @@ bindsym $mod+c exec --no-startup-id "env XDG_CURRENT_DESKTOP=gnome gnome-control
 
 #float QEMU windows
 for_window [class="Qemu-system-x86_64"] floating enable
+
+# launch pulseeffects to manage audio
+exec --no-startup-id $pulseeffects

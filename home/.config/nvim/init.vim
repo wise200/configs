@@ -24,8 +24,22 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " auto update parsers
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
+
+" VimTeX
+filetype plugin indent on
+syntax on
+let maplocalleader = "`"
+
+" Vim snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnips"]
 
 " language servers
 lua require('lspconfig').pyright.setup{}

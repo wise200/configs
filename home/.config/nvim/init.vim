@@ -45,6 +45,10 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnips"]
 lua require('lspconfig').pyright.setup{}
 lua require('lspconfig').clangd.setup{}
 
+" LSP configuration
+" (this could definitely be refined, see nvim-lspconfig README)
+nnoremap gd :lua vim.lsp.buf.definition()<CR>
+
 " color scheme
 set termguicolors
 colorscheme onedark

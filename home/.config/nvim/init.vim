@@ -123,3 +123,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 " color column
 set cc=80
+
+" smart case for text search
+set ignorecase
+set smartcase

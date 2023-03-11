@@ -136,3 +136,7 @@ alias debug='make "DEFS=-D DEBUG_MODE"'
 # use nvim as editor
 alias vi="nvim"
 alias vim="nvim"
+
+# source Vivado commands
+VIVADO_DIR="~/Xilinx/Vivado/2022.2/settings64.sh"
+[ -f $VIVADO_DIR ] && source $VIVADO_DIR

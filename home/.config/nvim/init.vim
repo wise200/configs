@@ -44,6 +44,8 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnips"]
 " language servers
 lua require('lspconfig').pyright.setup{}
 lua require('lspconfig').clangd.setup{}
+lua require('lspconfig').svls.setup{}
+lua require('lspconfig').r_language_server.setup{}
 
 " LSP configuration
 " (this could definitely be refined, see nvim-lspconfig README)

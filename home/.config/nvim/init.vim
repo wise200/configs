@@ -129,3 +129,20 @@ set cc=80
 " smart case for text search
 set ignorecase
 set smartcase
+
+" Toggle LSP diagnostics
+let diag_enable=0
+function! DiagToggle()
+  if g:diag_enable == 0
+    let g:diag_enable = 1
+    tabdo lua vim.lsp.diagnostic.disable()
+  else
+    let g:diag_enable = 0
+    tabdo lua vim.lsp.diagnostic.enable()
+  endif
+endfunction
+nmap <F8> mz:execute DiagToggle()<CR>
+
+" auto linting on file write
+au BufWritePost lua require('lint').try_lint()
+

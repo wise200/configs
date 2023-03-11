@@ -119,7 +119,7 @@ set $pulseeffects ~/.config/i3/pulseeffects
 exec_always --no-startup-id [ -f $monitors ] && $monitors
 
 # Lock Screen
-bindsym $mod+shift+x exec $lock
+bindsym $mod+shiftx exec $lock
 
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -271,3 +271,6 @@ for_window [class="Qemu-system-x86_64"] floating enable
 
 # launch pulseeffects to manage audio
 exec --no-startup-id $pulseeffects
+
+# open bluetooth settings
+bindsym $mod+v exec --no-startup-id blueman-manager

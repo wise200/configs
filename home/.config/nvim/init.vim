@@ -146,3 +146,4 @@ nmap <F8> mz:execute DiagToggle()<CR>
 " auto linting on file write
 au BufWritePost lua require('lint').try_lint()
 
+let g:airline#extensions#tabline#enabled = 0

@@ -27,3 +27,10 @@ R -e "install.packages('languageserver')"
 If your device is a laptop, you should also do the following:
 * You will need to install a package so i3 can change the screen brightness. Depending on your device, `xbacklight` or `brightnessctl` might work. Install one of these packages, and the i3config will find it and use it.
 * To get "natural" scrolling on your touchpad, follow the instructions [here](https://askubuntu.com/questions/1122513/how-to-add-natural-inverted-mouse-scrolling-in-i3-window-manager).
+
+
+### Todo
+* Merge xps branch back into master
+** Have some sort of configuration for activate to know which device and copy accordingly
+** c-style #ifdefs?
+* Migrate nvim to lua and overhaul config

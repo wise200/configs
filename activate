@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# this file copies changes from git into the relevant config files
+# remove old files
+# TODO: always delete files that have been removed from git
+rm -rf ~/.config/nvim
+rm -rf ~/.config/i3
+rm -rf ~/.config/i3status
 
+# copy current configs
 cp -r ./home/. ~
 
